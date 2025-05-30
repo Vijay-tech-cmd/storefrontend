@@ -23,11 +23,12 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
-    fetch('https://fakestoreapi.com/products')
+    fetch('https://fakestorebackend-di9i.onrender.com')
       .then(res => res.json())
       .then(data => {
         setProducts(data);
         setFiltered(data);
+        
       });
   }, []);
 
