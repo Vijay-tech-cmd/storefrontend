@@ -17,7 +17,9 @@ const Signup = () => {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Accept': 'application/json'
         },
+        credentials: 'include',
         body: JSON.stringify({ name, email, password }),
       });
 
@@ -30,8 +32,8 @@ const Signup = () => {
         alert(data.message || 'Signup failed');
       }
     } catch (err) {
-      alert('An error occurred during signup');
-      console.error(err);
+      console.error('Signup error:', err);
+      alert('An error occurred during signup. Please try again.');
     } finally {
       setIsLoading(false);
     }
