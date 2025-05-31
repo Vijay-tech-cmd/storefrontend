@@ -23,7 +23,7 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
-    fetch('https://fakestorebackend-di9i.onrender.com/api/store')
+    fetch('https://fakestorebackend-di9i.onrender.com/')
       .then(res => res.json())
       .then(data => {
         setProducts(data);
